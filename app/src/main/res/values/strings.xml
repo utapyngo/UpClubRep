@@ -7,7 +7,7 @@
     <string name="login_button">Login</string>
     <string name="phone_number">Phone number</string>
     <string name="password">Password</string>
-    <string name="create_account">Create account</string>
+    <string name="create_account"><a>Create account</a></string>
     <string name="patient">Patient</string>
     <string name="volunteer">Volunteer</string>
     <string name="organization">Organization</string>

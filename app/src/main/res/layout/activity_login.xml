@@ -42,8 +42,9 @@
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/sp_background_button"
-            android:layout_marginBottom="80dp"
+            android:background="@drawable/sp_backround_button"
+            android:layout_marginBottom="25dp"
+            android:textColor="@android:color/white"
             android:text="@string/login_button" />
 
         <TextView

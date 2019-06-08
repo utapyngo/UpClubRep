@@ -6,5 +6,5 @@ from volunteers.models import Volunteer
 class VolunteerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Volunteer
-        fields = ('user', 'rating')
+        fields = ('user', 'rating', 'skills')
         read_only_fields = ('rating',)
