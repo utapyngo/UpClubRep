@@ -6,5 +6,5 @@ from skills.models import Skill
 class SkillSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skill
-        fields = ('name', 'created')
+        fields = ('id', 'name', 'created')
         read_only_fields = ('created',)
