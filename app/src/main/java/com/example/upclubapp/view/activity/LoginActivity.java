@@ -1,4 +1,4 @@
-package com.example.upclubapp;
+package com.example.upclubapp.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.upclubapp.R;
+import com.example.upclubapp.view.activity.MainActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -57,6 +60,8 @@ public class LoginActivity extends AppCompatActivity {
         String phone = _phoneNumerText.getText().toString();
         String password = _passwordText.getText().toString();
 
+        openMainActivity();
+
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
@@ -75,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = _passwordText.getText().toString();
 
         if (phone.isEmpty() || !Patterns.PHONE.matcher(phone).matches()) {
-            _phoneNumerText.setError("enter a valid email address");
+            _phoneNumerText.setError("enter a valid phone number");
             valid = false;
         } else {
             _phoneNumerText.setError(null);
@@ -105,10 +110,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_SIGNUP) {
             if (resultCode == RESULT_OK) {
-
-
                 this.finish();
             }
         }
+    }
+
+    private void openMainActivity() {
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 }
