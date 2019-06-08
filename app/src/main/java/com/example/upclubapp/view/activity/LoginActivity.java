@@ -1,4 +1,4 @@
-package com.example.upclubapp;
+package com.example.upclubapp.view.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.upclubapp.R;
 
 public class LoginActivity extends AppCompatActivity {
 
