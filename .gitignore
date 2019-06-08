@@ -1,5 +1,8 @@
 *.iml
+*.sqlite3
+*.py[cod]
 .gradle
+/media/
 /local.properties
 /.idea/caches
 /.idea/libraries
