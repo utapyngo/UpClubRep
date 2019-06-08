@@ -8,6 +8,7 @@ import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationAdapter;
 import com.example.upclubapp.R;
 import com.example.upclubapp.view.fragment.ChatsFragment;
+import com.example.upclubapp.view.fragment.MarketFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -34,13 +35,17 @@ public class MainActivity extends AppCompatActivity
         adapter.setupWithBottomNavigation(ahBottomNavigation);
         ahBottomNavigation.setOnTabSelectedListener(this);
         ahBottomNavigation.setAccentColor(getResources().getColor(R.color.colorPrimary));
+        ahBottomNavigation.setCurrentItem(0);
     }
 
     @Override
     public boolean onTabSelected(int position, boolean wasSelected) {
         switch (position) {
             case 0: {
-                // TODO: Market
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment, new MarketFragment())
+                        .addToBackStack("market")
+                        .commit();
                 break;
             }
             case 1: {
