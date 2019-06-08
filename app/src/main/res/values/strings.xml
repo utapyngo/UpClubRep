@@ -3,8 +3,12 @@
     <string name="item_profile">Profile</string>
     <string name="item_chats">Chats</string>
     <string name="item_market">Market</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="hint_input_text">Input text...</string>
+    <string name="login_button">Login</string>
+    <string name="phone_number">Phone number</string>
+    <string name="password">Password</string>
+    <string name="create_account">Create account</string>
+    <string name="patient">Patient</string>
+    <string name="volunteer">Volunteer</string>
+    <string name="organization">Organization</string>
 </resources>

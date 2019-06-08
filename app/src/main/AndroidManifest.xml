@@ -13,13 +13,14 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
         <activity android:name=".view.activity.ChatActivity"
             android:theme="@style/ChatTheme"/>
-        <activity android:name=".view.activity.MainActivity">
+        <activity android:name=".view.activity.MainActivity"/>
+        <activity android:name=".ModeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
