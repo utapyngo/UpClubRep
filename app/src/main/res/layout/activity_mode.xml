@@ -22,7 +22,7 @@
             android:id="@+id/buttonPatient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            android:background="@drawable/sp_backround_button"
             android:text="@string/patient"
             android:textColor="@android:color/white"
             android:layout_marginBottom="15dp"/>
@@ -31,7 +31,7 @@
             android:id="@+id/buttonVolunteer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            android:background="@drawable/sp_backround_button"
             android:text="@string/volunteer"
             android:textColor="@android:color/white"
             android:layout_marginBottom="15dp"/>
@@ -40,7 +40,7 @@
             android:id="@+id/buttonOrganization"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            android:background="@drawable/sp_backround_button"
             android:text="@string/organization"
             android:textColor="@android:color/white"
             android:layout_marginBottom="15dp"/>
