@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity
         AHBottomNavigationAdapter adapter =
                 new AHBottomNavigationAdapter(this, R.menu.menu_bottom_navigaton);
         adapter.setupWithBottomNavigation(ahBottomNavigation);
+        ahBottomNavigation.setOnTabSelectedListener(this);
+        ahBottomNavigation.setAccentColor(getResources().getColor(R.color.colorPrimary));
     }
 
     @Override
