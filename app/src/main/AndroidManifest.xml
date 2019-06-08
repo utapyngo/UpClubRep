@@ -13,7 +13,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute">
-        <activity android:name=".view.activity.AddNewEventActivity"></activity>
+        <activity android:name=".view.activity.DetailsActivity"></activity>
+        <activity android:name=".view.activity.AddNewEventActivity" />
         <activity
             android:name=".view.activity.ChatActivity"
             android:theme="@style/ChatTheme" />

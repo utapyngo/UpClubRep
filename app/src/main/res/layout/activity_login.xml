@@ -26,7 +26,7 @@
             android:inputType="phone"
             android:textColor="@color/colorAccent"
             android:layout_marginBottom="15dp"
-            android:text="@string/phone_number" />
+            android:hint="@string/phone_number" />
 
         <EditText
             android:id="@+id/editTextPassword"
@@ -42,7 +42,7 @@
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/sp_backround_button"
+            android:background="@drawable/sp_background_button"
             android:layout_marginBottom="25dp"
             android:textColor="@android:color/white"
             android:text="@string/login_button" />

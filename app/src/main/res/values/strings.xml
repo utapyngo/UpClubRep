@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">upClubApp</string>
+    <string name="app_name" translatable="false">LifeHelp</string>
     <string name="item_profile">Profile</string>
     <string name="item_chats">Chats</string>
     <string name="item_market">Market</string>

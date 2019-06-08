@@ -17,6 +17,7 @@ import com.example.upclubapp.adapters.EventsRecyclerViewAdapter;
 import com.example.upclubapp.interfaces.OnClickModel;
 import com.example.upclubapp.model.Event;
 import com.example.upclubapp.view.activity.AddNewEventActivity;
+import com.example.upclubapp.view.activity.DetailsActivity;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -73,18 +74,24 @@ public class MarketFragment extends Fragment
     }
 
     @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
-
-    @Override
     public void onClick(Event model) {
-
+        Bundle bundle = new Bundle();
+        bundle.putString("title", model.getTitle());
+        bundle.putString("description", model.getDescription());
+        bundle.putString("address", model.getAddress());
+        Intent intent = new Intent(getActivity(), DetailsActivity.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 
     @Override
     public void onLongClick(Event model) {
 
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 }
