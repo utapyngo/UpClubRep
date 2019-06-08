@@ -1,5 +1,6 @@
 package com.example.upclubapp.view.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,6 +17,7 @@ import com.example.upclubapp.R;
 import com.example.upclubapp.adapters.ChatsRecyclerViewAdapter;
 import com.example.upclubapp.interfaces.OnClickModel;
 import com.example.upclubapp.model.Chat;
+import com.example.upclubapp.view.activity.ChatActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
@@ -78,7 +80,8 @@ public class ChatsFragment extends Fragment  implements OnClickModel<Chat> {
 
     @Override
     public void onClick(Chat model) {
-
+        Intent intent = new Intent(getActivity(), ChatActivity.class);
+        startActivity(intent);
     }
 
     @Override
