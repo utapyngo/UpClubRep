@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'easy_thumbnails',
     'rest_framework',
+    'rest_framework.authtoken',
     'users',
     'skills',
     'reviews',
