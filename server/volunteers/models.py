@@ -9,13 +9,8 @@ from users.models import User
 
 class Volunteer(TimeStampedModel):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    skills = models.ManyToManyField(Skill, blank=True)
     rating = models.IntegerField(default=0)
 
     def __str__(self):
         return f'Volunteer {self.id}: {self.user} ({self.rating})'
-
-
-class VolunteerSkill(TimeStampedModel):
-    volunteer = models.ForeignKey(Volunteer, models.CASCADE)
-    skill = models.ForeignKey(Skill, models.CASCADE)
-    approved = models.DateTimeField(null=True, blank=True)

@@ -24,6 +24,7 @@ from rest_framework.routers import DefaultRouter
 
 from patients.api import PatientViewSet
 from reviews.api import ReviewViewSet
+from skills.api import SkillViewSet
 from users.api import UserViewSet
 from volunteers.api import VolunteerViewSet
 
@@ -32,6 +33,7 @@ api.register('user', UserViewSet)
 api.register('volunteer', VolunteerViewSet)
 api.register('patient', PatientViewSet)
 api.register('review', ReviewViewSet)
+api.register('skill', SkillViewSet)
 
 urlpatterns = [
     # url(r'^api/', include('authentication.urls')),
