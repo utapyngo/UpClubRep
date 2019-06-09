@@ -172,3 +172,7 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
     )
 }
+
+
+import django_heroku
+django_heroku.settings(locals())
