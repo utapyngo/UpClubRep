@@ -3,6 +3,8 @@
 *.py[cod]
 .gradle
 /media/
+/server/media/
+/server/staticfiles/
 /local.properties
 /.idea/caches
 /.idea/libraries

@@ -129,17 +129,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 
-PROJECT_DIR = Path(__file__).absolute().parents[1]
-BASE_DIR = PROJECT_DIR.parent
-
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATIC_URL = '/static/'
-STATIC_ROOT = PROJECT_DIR / 'static_all'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = (
-    PROJECT_DIR / 'static',
+    os.path.join(BASE_DIR, 'static'),
 )
 
 AUTH_USER_MODEL = 'users.User'
