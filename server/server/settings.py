@@ -139,7 +139,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = PROJECT_DIR / 'static_all'
 
 STATICFILES_DIRS = (
-    BASE_DIR / 'static',
+    PROJECT_DIR / 'static',
 )
 
 AUTH_USER_MODEL = 'users.User'
