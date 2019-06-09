@@ -19,8 +19,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include
 from django.urls import path
+from django.views.generic import RedirectView
 from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework.routers import DefaultRouter
+from rest_framework.routers import SimpleRouter
 
 from helprequests.api import HelpRequestViewSet
 from patients.api import PatientViewSet
@@ -29,7 +31,7 @@ from skills.api import SkillViewSet
 from users.api import UserViewSet
 from volunteers.api import VolunteerViewSet
 
-api = DefaultRouter()
+api = DefaultRouter() if settings.DEBUG else SimpleRouter()
 api.register('user', UserViewSet)
 api.register('volunteer', VolunteerViewSet)
 api.register('patient', PatientViewSet)
@@ -38,8 +40,8 @@ api.register('skill', SkillViewSet)
 api.register('help-request', HelpRequestViewSet)
 
 urlpatterns = [
-    # url(r'^api/', include('authentication.urls')),
     url(r'^api-token-auth/', obtain_auth_token),
     url(r'^api/', include(api.urls)),
+    url(r'^$', RedirectView.as_view(url='/admin')),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
