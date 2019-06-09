@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'reviews',
     'patients',
     'volunteers',
+    'helprequests',
 ]
 
 MIDDLEWARE = [

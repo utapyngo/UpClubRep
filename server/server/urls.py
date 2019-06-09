@@ -22,6 +22,7 @@ from django.urls import path
 from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework.routers import DefaultRouter
 
+from helprequests.api import HelpRequestViewSet
 from patients.api import PatientViewSet
 from reviews.api import ReviewViewSet
 from skills.api import SkillViewSet
@@ -34,6 +35,7 @@ api.register('volunteer', VolunteerViewSet)
 api.register('patient', PatientViewSet)
 api.register('review', ReviewViewSet)
 api.register('skill', SkillViewSet)
+api.register('help-request', HelpRequestViewSet)
 
 urlpatterns = [
     # url(r'^api/', include('authentication.urls')),
