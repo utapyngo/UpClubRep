@@ -22,7 +22,7 @@ public class ApiUtils {
     public static ApiService create() {
         Gson gson = new GsonBuilder().create();
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.70.105:9876/")
+                .baseUrl("https://upclub.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(generateHttpClient())
                 .build();
