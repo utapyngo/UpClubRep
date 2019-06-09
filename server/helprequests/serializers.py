@@ -9,7 +9,7 @@ class HelpRequestSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = HelpRequest
-        fields = ('id', 'patient', 'title', 'text', 'skill', 'address')
+        fields = ('id', 'patient', 'title', 'text', 'skill', 'address', 'lat', 'lon')
         read_only_fields = ('patient',)
 
     # noinspection PyMethodMayBeStatic
