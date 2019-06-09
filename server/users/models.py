@@ -18,7 +18,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(_('first name'), max_length=30, blank=True)
     middle_name = models.CharField(_('middle name'), max_length=150, blank=True)
     last_name = models.CharField(_('last name'), max_length=150, blank=True)
-    phone_number = PhoneNumberField()
+    phone_number = PhoneNumberField(unique=True)
     photo = models.ImageField(
         upload_to='user_photos',
         verbose_name=_('Upload a photo'),
@@ -38,7 +38,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     )
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = 'phone_number'
     REQUIRED_FIELDS = []
 
     objects = UserManager()
