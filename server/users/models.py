@@ -25,7 +25,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         default='',
         blank=True,
     )
-    email = models.EmailField(_('email address'), unique=True)
+    email = models.EmailField(_('email address'), unique=True, blank=True)
     is_staff = models.BooleanField(
         _('staff status'), default=False,
         help_text=_('Designates whether the user can log into this admin '
@@ -47,9 +47,12 @@ class User(AbstractBaseUser, PermissionsMixin):
         verbose_name = _('user')
         verbose_name_plural = _('users')
 
+    def __str__(self):
+        return str(self.phone_number)
+
     @property
     def username(self):
-        return self.email
+        return self.phone_number
 
     @username.setter
     def username(self, value):
