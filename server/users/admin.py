@@ -12,7 +12,7 @@ class CustomUserAdmin(UserAdmin):
     ordering = ['id']
     inlines = [VolunteerInline, PatientInline]
     fieldsets = (
-        (None, {'fields': ('phone_number', 'password')}),
+        (None, {'fields': ('photo', 'phone_number', 'password')}),
         (_('Personal info'), {'fields': ('first_name', 'middle_name', 'last_name', 'email')}),
         (_('Permissions'), {
             'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions'),

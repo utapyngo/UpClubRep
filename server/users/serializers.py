@@ -4,16 +4,16 @@ from users.models import User
 
 
 class UserSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True)
+    password = serializers.CharField(write_only=True, required=False)
 
     class Meta:
         model = User
         fields = (
             'id', 'email', 'password',
-            'photo_url', 'phone_number',
-            'first_name', 'middle_name', 'last_name',
+            'photo', 'photo_url', 'phone_number',
+            'first_name', 'middle_name', 'last_name', 'birth_date',
         )
-        write_only_fields = ('password',)
+        write_only_fields = ('password', 'photo')
         read_only_fields = ('id',)
 
     def create(self, validated_data):
@@ -26,5 +26,4 @@ class UserSerializer(serializers.ModelSerializer):
         )
         user.set_password(validated_data['password'])
         user.save()
-
         return user
