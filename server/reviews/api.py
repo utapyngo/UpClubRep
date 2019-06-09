@@ -10,3 +10,5 @@ class ReviewViewSet(ModelViewSet):
     serializer_class = ReviewSerializer
     permission_classes = (FromUserOrReadOnly,)
     queryset = Review.objects.all()
+    filterset_fields = ('text', 'rating', 'from_member', 'to_member',)
+    search_fields = ('text', 'rating', 'from_member__user__email', 'to_member__user__email',)

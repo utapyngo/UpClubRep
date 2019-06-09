@@ -10,3 +10,5 @@ class SkillViewSet(ModelViewSet):
     serializer_class = SkillSerializer
     permission_classes = (IsAuthenticated,)
     queryset = Skill.objects.all()
+    filterset_fields = ('name',)
+    search_fields = ('name',)
